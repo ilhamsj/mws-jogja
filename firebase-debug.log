@@ -1,0 +1,65 @@
+[debug] [2018-10-23T11:22:56.513Z] ----------------------------------------------------------------------
+[debug] [2018-10-23T11:22:56.528Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ilham\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-10-23T11:22:56.528Z] CLI Version:   5.1.1
+[debug] [2018-10-23T11:22:56.528Z] Platform:      win32
+[debug] [2018-10-23T11:22:56.528Z] Node Version:  v8.10.0
+[debug] [2018-10-23T11:22:56.528Z] Time:          Tue Oct 23 2018 18:22:56 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-10-23T11:22:56.528Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-23T11:22:56.528Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-23T11:22:56.528Z] > authorizing via signed-in user
+[debug] [2018-10-23T11:22:56.528Z] [iam] checking project ilhamsj-17 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2018-10-23T11:22:56.528Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ilhamsj-17:testIamPermissions  
+
+[debug] [2018-10-23T11:22:57.809Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-23T11:22:57.809Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ilhamsj-17  
+ 
+[debug] [2018-10-23T11:22:58.215Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'ilhamsj-17'...
+[info] 
+[info] i  deploying hosting
+[debug] [2018-10-23T11:22:58.215Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ilhamsj-17/versions  
+
+[debug] [2018-10-23T11:22:59.975Z] <<< HTTP RESPONSE 200
+[info] i  hosting[ilhamsj-17]: beginning deploy...
+[info] i  hosting[ilhamsj-17]: found 8 files in public
+[debug] [2018-10-23T11:22:59.986Z] [hosting] hash cache [cHVibGlj] stored for 8 files
+[debug] [2018-10-23T11:22:59.986Z] [hosting][hash queue][FINAL]
+[debug] [2018-10-23T11:22:59.986Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ilhamsj-17/versions/2467c21cb5e7d1a8:populateFiles  
+ <request body omitted>
+[debug] [2018-10-23T11:23:01.597Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-23T11:23:01.597Z] [hosting][populate queue][FINAL]
+[debug] [2018-10-23T11:23:01.597Z] [hosting] uploads queued: 0
+[debug] [2018-10-23T11:23:01.597Z] [hosting][upload queue][FINAL]
+[info] +  hosting[ilhamsj-17]: file upload complete
+[debug] [2018-10-23T11:23:01.599Z] [hosting] deploy completed after 1623ms
+[debug] [2018-10-23T11:23:01.739Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "ilhamsj-17"
+    },
+    "site": "ilhamsj-17",
+    "version": "sites/ilhamsj-17/versions/2467c21cb5e7d1a8"
+  }
+]
+[info] i  hosting[ilhamsj-17]: finalizing version...
+[debug] [2018-10-23T11:23:01.740Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/ilhamsj-17/versions/2467c21cb5e7d1a8?updateMask=status  
+
+[debug] [2018-10-23T11:23:03.225Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-23T11:23:03.225Z] [hosting] finalized version for ilhamsj-17:
+[info] +  hosting[ilhamsj-17]: version finalized
+[info] i  hosting[ilhamsj-17]: releasing new version...
+[debug] [2018-10-23T11:23:03.226Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ilhamsj-17/releases?version_name=sites/ilhamsj-17/versions/2467c21cb5e7d1a8  
+
+[debug] [2018-10-23T11:23:24.966Z] Error: read ECONNRESET
+    at _errnoException (util.js:1022:11)
+    at TLSWrap.onread (net.js:628:25)
+[error] 
+[error] Error: Server Error. read ECONNRESET
